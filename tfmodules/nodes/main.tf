@@ -53,7 +53,7 @@ resource "aws_instance" "master" {
   vpc_security_group_ids = ["${aws_security_group.nodes.id}"]
   subnet_id              = "${var.subnet_id}"
 
-  tags {
+  tags = {
     Name = "${var.name}-master"
   }
 
@@ -93,7 +93,7 @@ resource "aws_instance" "slave" {
   vpc_security_group_ids = ["${aws_security_group.nodes.id}"]
   subnet_id              = "${var.subnet_id}"
 
-  tags {
+  tags = {
     Name = "${var.name}-slave"
   }
 

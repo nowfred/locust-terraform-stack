@@ -1,6 +1,6 @@
 # Configure the AWS Provider
 provider "aws" {
-  version = "1.60.0"
+  version = "2.57.0"
   region = "${var.region}"
 }
 
